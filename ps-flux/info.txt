@@ -7,3 +7,20 @@ PS D:\Data\Vatan\Learnings\AA Authors\CoryHouse\React\CoryHouseReact\ps-flux> np
 
 Install flux(3.1.3), react-router-dom(5.0.0) and bootstrap (4.3.1):
 npm install flux@3.1.3 react-router-dom@5.0.0 bootstrap@4.3.1
+
+Mock-API:
+npm install -D cross-env@5.2.0 npm-run-all@4.1.5 json-server@0.15.0
+---------------
+"prestart:api": "node tools/createMockDb.js", :
+The mock data creater.
+
+"start:api": "node tools/apiServer.js", :
+
+---------------
+
+npm run start:api
+
+npm start:
+"start": "run-p start:dev start:api",
+
+
