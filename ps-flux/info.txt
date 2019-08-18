@@ -40,4 +40,8 @@ camelCased attributes
 ---fun and export--
 fun start from Capital letter, lower is assumed as html component.
 by default everything in each file is private so we need to export.
----------  
+---------  Alt+Arrow-------
+
+Moves a line up/down
+
+---------------------------
