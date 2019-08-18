@@ -23,4 +23,16 @@ npm run start:api
 npm start:
 "start": "run-p start:dev start:api",
 
+----------------------------------------
+fetch and env vars:
 
+fetch to make api call, and .then() is call when async call is complete.
+fetch default is get so no need to specify
+
+create-react-app looks for env vars that start with REACT_APP and allows us to replace their values in code.
+
+---------HTML vs JSX----------
+class -> className
+for -> htmlFor
+camelCased attributes
+  - tabindex -> tabIndex
