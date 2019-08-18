@@ -36,3 +36,8 @@ class -> className
 for -> htmlFor
 camelCased attributes
   - tabindex -> tabIndex
+
+---fun and export--
+fun start from Capital letter, lower is assumed as html component.
+by default everything in each file is private so we need to export.
+---------  
