@@ -8,6 +8,7 @@ function HomePage() {
     <div className="jumbotron">
       <h1>Pluralsite Administration</h1>
       <p>Ultra responsive web app.</p>
+      <a href="/about">About</a>
     </div>
   );
 }
