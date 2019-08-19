@@ -44,4 +44,32 @@ by default everything in each file is private so we need to export.
 
 Moves a line up/down
 
----------------------------
+-------------Props and State--------------
+Props:
+  Data passed from parent to child
+  Looks like html attribute.
+  Immutable:
+    Want to change then call a fun provided by parent.
+State:
+  Holds mutable State
+  Set via setState in class components./ this.state.username
+  useState or useReducer hooks in fun. component./ state.username
+
+--------life-Cycle Methods-----------
+LifeCycle
+  Mounting:
+    constructor
+    render
+    React updates DOM and refs
+    componentDidMount
+  Updating:
+    New props/setState()/forceUpdate()
+    render
+    React updates DOM and refs
+    componentDidMount
+  Unmounting
+    componentWillUnmount
+
+----------Demo-LifeCycle-------
+
+{" "} : non breaking space within JSX.
