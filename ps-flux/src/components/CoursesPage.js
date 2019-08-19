@@ -4,9 +4,11 @@ import { getCourses } from "../api/courseApi";
 function CoursesPage() {
   const [courses, setCourses] = useState([]);
 
+  //Calling setCourses causes the compo to re-render, which caused useEffect to re-run.
+  //The dependency array is a list of values that useEffect should watch. It re-runs when values in this array change.
   useEffect(() => {
     getCourses().then(_courses => setCourses(_courses));
-  });
+  }, []);
 
   return (
     <>

@@ -89,4 +89,7 @@ Rules:
     - Don't wrap in if statement, loops , funcs
     - Why? React tracks Hook call order
 
+Calling setCourses causes the compo to re-render, which caused useEffect to re-run.
+The dependency array is a list of values that useEffect should watch. It re-runs when values in this array change.
+
 ------------------------------------------
