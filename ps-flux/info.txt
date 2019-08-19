@@ -73,3 +73,20 @@ LifeCycle
 ----------Demo-LifeCycle-------
 
 {" "} : non breaking space within JSX.
+---------------Hooks--------
+It make easy to create fun component for almost everything.
+
+Hooks:
+  useState - Local state
+  useEffect - Side useEffect
+  useContext - Access data in context
+
+Rules:
+  Only call in
+    - React function components
+    - Custom Hooks
+  Hooks must be at  declared top level
+    - Don't wrap in if statement, loops , funcs
+    - Why? React tracks Hook call order
+
+------------------------------------------
