@@ -76,9 +76,12 @@ LifeCycle
 ---------------Hooks--------
 It make easy to create fun component for almost everything.
 
-Hooks:
+Hooks: Only call from function
   useState - Local state
   useEffect - Side useEffect
+    componentDidMount +
+    componentDidUpdate +
+    componentWillUnmount
   useContext - Access data in context
 
 Rules:
