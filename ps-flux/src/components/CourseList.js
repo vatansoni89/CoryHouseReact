@@ -27,12 +27,14 @@ function CourseList(props) {
 }
 
 CourseList.propTypes = {
-  courses: PropTypes.array.isRequired
-};
-
-//If required then
-CourseList.defaultProps = {
-  courses: []
+  courses: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      titile: PropTypes.string.isRequired,
+      authorId: PropTypes.number.isRequired,
+      category: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 export default CourseList;
