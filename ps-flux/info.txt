@@ -104,6 +104,8 @@ CoursePage.js:
   CoursePage() + CourseList.js:CourseList()
 
 ------------------PropTypes-------------------------------
+Why: We require PropTypes for validating the props
+
 1. Import proptypes Steps
 
 import PropTypes from "prop-types";
