@@ -95,4 +95,12 @@ Rules:
 Calling setCourses causes the compo to re-render, which caused useEffect to re-run.
 The dependency array is a list of values that useEffect should watch. It re-runs when values in this array change.
 
-------------------------------------------
+---------------Controller view---------------------------
+//Separation of concerns
+CoursePage.js:
+  CoursePage()
+
+CoursePage.js:
+  CoursePage() + CourseList.js:CourseList()
+
+-----------------------------------------------------------
