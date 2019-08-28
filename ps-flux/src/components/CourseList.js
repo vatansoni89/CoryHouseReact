@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CourseList(props) {
   return (
@@ -24,5 +25,14 @@ function CourseList(props) {
     </table>
   );
 }
+
+CourseList.propTypes = {
+  courses: PropTypes.array.isRequired
+};
+
+//If required then
+CourseList.defaultProps = {
+  courses: []
+};
 
 export default CourseList;

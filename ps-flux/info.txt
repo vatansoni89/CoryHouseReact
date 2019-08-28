@@ -103,4 +103,12 @@ CoursePage.js:
 CoursePage.js:
   CoursePage() + CourseList.js:CourseList()
 
------------------------------------------------------------
+------------------PropTypes-------------------------------
+1. Import proptypes Steps
+
+import PropTypes from "prop-types";
+
+2. define properties for the function we need validation before export.
+
+
+-------------------------------------------------------
