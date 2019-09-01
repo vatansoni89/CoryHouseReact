@@ -142,4 +142,52 @@ ReactRouter:
     MemoryRouter
       No URL
 
--------------------------------------
+--------------Application Structure-----------------------
+
+Index
+  Router
+    App
+      Header
+      HomePage
+      CoursesPage
+        CourseList
+      AboutPage
+
+-----------------Links and NavLinks------------------------
+
+Links:
+NavLinks:
+  active style apply when navlink path matches url.
+Switch:
+  A routh with no path will match all routes 
+Redirect:
+  Programetically change the url
+    { this.state.redirectToUsers && <Redirect to='/users' /> }
+    props.history.push('new/path')
+  Need to change URL
+    <Redirect from='/old-path' to='/new-path' />
+
+------------------------URL parameters-------------------------
+
+ActualUrl:
+  myapp.com/course/clean-code?module=3
+Route:
+  <Route path="/course/:slug" component={Course} />
+function Course(props):
+  props.match.params.slug: clean-code
+  props.location.query: { module: 3 }
+  props.location.pathname: /course/clean-code/?module=3 
+
+
+
+
+
+UrlParameters
+  ManageCoursePage.js
+    props.match.params.slug
+    populated by react router.
+  App.js
+    <Route path="/course" component={ManageCoursePage} />
+  CourseList.js
+    <Link to={"/course/" + course.slug}>{course.title}</Link>
+    

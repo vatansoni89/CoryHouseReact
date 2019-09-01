@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CourseList(props) {
   return (
@@ -15,7 +16,9 @@ function CourseList(props) {
         {props.courses.map(c => {
           return (
             <tr key={c.id}>
-              <td>{c.title}</td>
+              <td>
+                <Link to={"/course/" + c.slug}>{c.title}</Link>
+              </td>
               <td>{c.authorId}</td>
               <td>{c.category}</td>
             </tr>
@@ -30,7 +33,7 @@ CourseList.propTypes = {
   courses: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      titile: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       authorId: PropTypes.number.isRequired,
       category: PropTypes.string.isRequired
     })
