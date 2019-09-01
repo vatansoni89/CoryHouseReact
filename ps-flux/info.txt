@@ -113,4 +113,33 @@ import PropTypes from "prop-types";
 2. define properties for the function we need validation before export.
 
 
--------------------------------------------------------
+-------------------React Router------------------------------------
+React Router:
+  RouterURL parameters
+  Link
+  Redirects
+  404 CoursePagePage transitions
+  
+ReactRouter:
+  Router: 
+    Wrap entry point
+    BrowserRouter
+     Uses HTML5 histort url, no # in url 
+  Route: 
+    Load this component for this url
+    *property: 
+      exact: matches exact route but reload page.
+  Link: 
+    Anchors
+    This will be managed by react router so no postback to the browser
+
+ReactRouter:
+  Router:
+    HashRouter
+      #about
+    BrowserRouter
+      /about
+    MemoryRouter
+      No URL
+
+-------------------------------------
