@@ -179,9 +179,6 @@ function Course(props):
   props.location.pathname: /course/clean-code/?module=3 
 
 
-
-
-
 UrlParameters
   ManageCoursePage.js
     props.match.params.slug
@@ -190,4 +187,10 @@ UrlParameters
     <Route path="/course" component={ManageCoursePage} />
   CourseList.js
     <Link to={"/course/" + course.slug}>{course.title}</Link>
+
+----------------------Prompt on Transition-----------------------
+
+When the page is dirty, prompt message if we leave/navigate to smwhere.
+
+-------------------------------------------------------------
     
