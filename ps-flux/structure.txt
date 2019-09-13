@@ -1,0 +1,10 @@
+Index
+  Router
+    App
+      Header
+      HomePage
+      CoursesPage: hv state
+        CourseList
+          ManageCoursePage: hv state
+            CourseForm
+      AboutPage

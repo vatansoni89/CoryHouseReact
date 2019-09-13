@@ -150,6 +150,8 @@ Index
       Header
       HomePage
       CoursesPage
+        ManageCoursePage
+          CourseForm
         CourseList
       AboutPage
 
@@ -192,5 +194,29 @@ UrlParameters
 
 When the page is dirty, prompt message if we leave/navigate to smwhere.
 
--------------------------------------------------------------
+--------------------------Forms-----------------------------------
     
+Forms:
+  validation
+  Redirects
+  ReusableInputs
+  UserNotifications
+  SavingAndPopulationOnLoad
+
+Controlled Component:
+  Any <input> with value set is a controlled component.
+  Elements's value always matches the value of the assigned prop.
+
+To input data to the Controlled Component:
+  Declare change handler for each input.
+  Declare state.
+
+-----------------------------------------------------------------
+CourseForm.js:
+Convention: If input has same name of title, 
+it's assumed the value will be stored in course.title.
+
+[event.target.name]: event.target.value => [] is computed property.
+ set the property on this object based on the value of this variable.
+
+ 
