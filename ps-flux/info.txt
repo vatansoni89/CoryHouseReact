@@ -229,3 +229,10 @@ CourseForm.js:
 Nofity:
   react-toastify:
     npm install react-toastify@5.1.1
+
+----------Input Validation------------
+
+Validation:
+  Form is valid if errors object has no properties.
+  PropTypes:
+    contract validator.

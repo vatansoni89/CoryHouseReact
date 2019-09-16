@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function TextInput(props) {
+  //console.log("vata error", props.error);
   let wrapperClass = "form-group";
   if (props.error.length > 0) {
     wrapperClass += " has-error";
@@ -19,7 +20,7 @@ function TextInput(props) {
           value={props.value}
         />
       </div>
-      {props.error && <div className="alert alert-danger"></div>}
+      {props.error && <div className="alert alert-danger">{props.error}</div>}
     </div>
   );
 }
