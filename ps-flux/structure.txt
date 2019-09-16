@@ -7,4 +7,5 @@ Index
         CourseList
           ManageCoursePage: hv state
             CourseForm
+              TextInput
       AboutPage
