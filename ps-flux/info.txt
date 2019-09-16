@@ -236,3 +236,10 @@ Validation:
   Form is valid if errors object has no properties.
   PropTypes:
     contract validator.
+  
+------------Edit Existing Course--------
+
+Edit Existing Course:
+  ManageCoursepage.js:
+    useEffect
+      

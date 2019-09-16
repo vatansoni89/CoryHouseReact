@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { Prompt } from "react-router-dom";
 import CourseForm from "./CourseForm";
 import * as courseApi from "../api/courseApi";
@@ -19,6 +19,13 @@ const ManageCoursepage = props => {
   //   const updatedCourse = { ...course, title: event.target.value };
   //   setCourse(updatedCourse);
   // }
+
+  useEffect(() => {
+    const slug = props.match.params.slug;
+    if (slug) {
+      courseApi.getCourseBySlug(slug).then(_c => setCourse(_c));
+    }
+  }, [props.match.params.slug]);
 
   function handleChange({ target }) {
     const updatedCourse = {
