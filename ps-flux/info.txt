@@ -224,3 +224,8 @@ CourseForm.js:
  TextInput.js:
    has-error:
      will add red line around input.
+
+----------------Save-Redirect-Nofity--------
+Nofity:
+  react-toastify:
+    npm install react-toastify@5.1.1
