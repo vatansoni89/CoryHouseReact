@@ -213,10 +213,14 @@ To input data to the Controlled Component:
 
 -----------------------------------------------------------------
 CourseForm.js:
-Convention: If input has same name of title, 
-it's assumed the value will be stored in course.title.
+  Convention: If input has same name of title, 
+  it's assumed the value will be stored in course.title.
+  <form onSubmit={props.onSubmit}>: Form will besubmitted on button click and on press Enter also.
+
 
 [event.target.name]: event.target.value => [] is computed property.
  set the property on this object based on the value of this variable.
 
- 
+ TextInput.js:
+   has-error:
+     will add red line around input.
