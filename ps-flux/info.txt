@@ -243,3 +243,82 @@ Edit Existing Course:
   ManageCoursepage.js:
     useEffect
       
+----------------Flux----------------------
+
+## Flux flow
+Flux:
+  Actions: Encapsulates events, Delete user
+  Dispatcher: Central hub, A list of callback functions.
+  Stores: hold app state, Hold app state and logic.
+  Unidirectional:
+   Action>Dispatcher>Store>React
+
+
+Actions:
+   Encapsulate events.
+   Triggered by user interactions and server.
+   Passed to dispatcher.
+   Payload has type and data
+     {
+       type: "USER_SAVED" ##type is required
+       data: {
+         firstName: 'Vatan',
+         lastName: 'Soni'
+       }
+     }
+
+Dispatcher:
+  Dispatch Action.
+  Only one in app.
+  Hold list of callback.
+  broadcast payload to registered callbacks.
+  Send actions to stores.
+  Each action updated specific store based on the callback registerd with dispatcher.
+  Constants:
+    Keeps things organised.
+    Provide high level view of app work-flow.
+
+Store:
+  Holds app state, logic, data retrieval.  
+  Not a model - Contains model.
+  One, or many.
+  Registers callbacks with dispatcher.
+  Use Node's EventEmitter
+  Only the store can update data.
+  Common Methods:
+    Extend EventEmitter
+    addChangeListener and removeChangeListener
+    emitChange
+
+MultiStoreExample
+  Payloas
+    User Store
+    Address Store
+    Product Store
+
+Controller Views:
+  Top level component.
+  Interacts with Stores.
+  Holds data in state.
+  Sends data to children as props.
+
+## Uni directional flow
+Action  <-> Web Api
+  Send Action Payload
+    Dispatcher
+      Send Action Payload
+        Store
+          Updates storage and fires change event
+            React
+
+Flux Api Methods:
+  register(function callback)
+  unregister(string id)
+  waitFor(array<string> ids)
+  dispatch(object payload)
+  isDispatching
+  Gyan:
+    Every payloas is dispatched to all registered callbacks.
+    Callbacks can wait for other callbacks.
+
+-------------------------------------------------------------------------
