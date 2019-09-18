@@ -1,11 +1,22 @@
-Index
-  Router
-    App
-      Header
-      HomePage
-      CoursesPage: hv state
-        CourseList
-          ManageCoursePage: hv state
-            CourseForm
-              TextInput
-      AboutPage
+src
+  Index
+    Router
+      App
+        Header
+        HomePage
+        CoursesPage: hv state
+          CourseList
+            ManageCoursePage: hv state
+              CourseForm
+                TextInput
+        AboutPage
+  actions(f)
+    actionTypes.js(variables)
+    courseActions.js
+      saveCourse(course)
+  appDispatcher.js(dispatcher)
+  stores(f)
+    courseStore.js
+      addChangeListener (callback)
+      removeChangeListener (callback)
+      emitChange() 

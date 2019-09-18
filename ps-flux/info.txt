@@ -321,4 +321,30 @@ Flux Api Methods:
     Every payloas is dispatched to all registered callbacks.
     Callbacks can wait for other callbacks.
 
--------------------------------------------------------------------------
+------------------------------Flux Demos-------------------------------------------
+
+courseActions.js  
+  not a react component so file name starts with lower case
+
+
+  FluxDemoStructure:
+    src:
+      actions(f)
+        actionTypes.js(variables)
+        courseActions.js
+          saveCourse(course)
+      appDispatcher.js(dispatcher)
+      stores(f)
+        courseStore.js
+          addChangeListener (callback)
+          removeChangeListener (callback)
+          emitChange () 
+
+3 Functions in every Flux store:
+  addChangeListener (wraps on)
+  removeChangeListener (wraps removeChangeListener)
+  emitChange (wraps emit)        
+
+  --------------------------
+
+  Since our component is connected to the flux store, when courses are added to the store, onChange will be called.
