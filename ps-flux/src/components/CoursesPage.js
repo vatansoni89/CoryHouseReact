@@ -4,6 +4,7 @@ import courseStore from "../stores/courseStore";
 import CourseList from "./CourseList";
 import { Link } from "react-router-dom";
 import { loadCourses } from "../actions/courseActions";
+
 function CoursesPage() {
   //const [courses, setCourses] = useState([]); //useState Hook
   const [courses, setCourses] = useState(courseStore.getCourses());
