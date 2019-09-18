@@ -8,7 +8,9 @@ export function saveCourse(course) {
   return courseApi.saveCourse(course).then(savedCourse => {
     //notify all stores athat a course was jst created.
     dispatcher.dispatch({
-      actionType: actionTypes.CREATE_COURSE,
+      actionType: course.id
+        ? actionTypes.UPDATE_COURSE
+        : actionTypes.CREATE_COURSE,
       course: savedCourse
     });
   });
