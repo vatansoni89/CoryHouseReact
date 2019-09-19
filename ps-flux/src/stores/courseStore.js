@@ -19,10 +19,12 @@ class CourseStore extends EventEmitter {
   }
 
   getCourses() {
+    debugger;
     return _courses;
   }
 
   getCourseBySlug(slug) {
+    debugger;
     return _courses.find(c => c.slug === slug);
   }
 }
@@ -31,6 +33,10 @@ const store = new CourseStore();
 
 Dispatcher.register(action => {
   switch (action.actionType) {
+    case actionTypes.DELETE_COURSE:
+      _courses = _courses.filter(c => c.id !== parseInt(action.id, 10));
+      store.emitChange();
+      break;
     case actionTypes.CREATE_COURSE:
       _courses.push(action.course);
       store.emitChange();

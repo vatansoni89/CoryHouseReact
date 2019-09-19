@@ -25,3 +25,13 @@ export function loadCourses() {
     });
   });
 }
+
+export function deleteCourse(id) {
+  return courseApi.deleteCourse(id).then(() => {
+    //notify all stores that a course was jst deleted.
+    dispatcher.dispatch({
+      actionType: actionTypes.DELETE_COURSE,
+      id: id
+    });
+  });
+}

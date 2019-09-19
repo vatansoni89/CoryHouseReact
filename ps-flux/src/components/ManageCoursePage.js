@@ -9,6 +9,7 @@ import * as courseActions from "../actions/courseActions";
 const ManageCoursepage = props => {
   //debugger;
   const [errors, setErrors] = useState({});
+  const [courses, setCourses] = useState(courseStore.getCourses());
   const [course, setCourse] = useState({
     id: null,
     slug: "",
@@ -23,13 +24,20 @@ const ManageCoursepage = props => {
   // }
 
   useEffect(() => {
+    debugger;
+    courseStore.addChangeListener(onChange);
     const slug = props.match.params.slug;
     console.log("slug is: ", props.match.params.slug);
-    if (slug) {
+
+    //Course Page Refresh fix
+    if (courses.length === 0) {
+      courseActions.loadCourses();
+    } else if (slug) {
       //courseApi.getCourseBySlug(slug).then(_c => setCourse(_c));
       setCourse(courseStore.getCourseBySlug(slug));
     }
-  }, [props.match.params.slug]);
+    return () => courseStore.removeChangeListener(onChange);
+  }, [courses.length, props.match.params.slug]);
 
   function handleChange({ target }) {
     const updatedCourse = {
@@ -37,6 +45,10 @@ const ManageCoursepage = props => {
       [target.name]: target.value
     };
     setCourse(updatedCourse);
+  }
+
+  function onChange() {
+    setCourses(courseStore.getCourses());
   }
 
   function formIsValid() {
